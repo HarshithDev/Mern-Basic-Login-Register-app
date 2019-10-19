@@ -24,11 +24,11 @@ module.exports = function validateRegisterInput(data){
 
     //Password check
     if(Validator.isEmpty(data.password)){
-        errors.password = "Email field is required";
+        errors.password = "Password field is required";
     }
 
     if(Validator.isEmpty(data.password2)){
-        errors.password2 = "Email field is required";
+        errors.password2 = "Confirm Password is required";
     }
 
     if(!Validator.isLength(data.password,{min: 6,max: 30})){
